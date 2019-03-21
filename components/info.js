@@ -1,19 +1,14 @@
-import React from 'react';
-import {
-  Text,
-  View,
-  Animated,
-  VrButton,
-  StyleSheet
-} from 'react-vr';
-import planets from '../data/planets';
+import React from "react";
+import { Text, View, Animated, VrButton, StyleSheet } from "react-vr";
+
+import planets from "../data/planets";
 
 export default class Info extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      tilesOpen: false,
+      tilesOpen: false
     };
   }
 
@@ -21,9 +16,7 @@ export default class Info extends React.Component {
   description(description) {
     return (
       <View>
-        <Text style={styles.description}>
-          {description}
-        </Text>
+        <Text style={styles.description}>{description}</Text>
       </View>
     );
   }
@@ -32,7 +25,7 @@ export default class Info extends React.Component {
   tiles(info) {
     return (
       <View style={styles.tiles}>
-        {info.map(({label, value}) => (
+        {info.map(({ label, value }) => (
           <View style={styles.tile}>
             <Text style={styles.tileLabel}>{label}</Text>
             <Text style={styles.tileValue}>{value}</Text>
@@ -43,24 +36,20 @@ export default class Info extends React.Component {
   }
 
   render() {
-    const {currentPlanet} = this.props;
-    const {tilesOpen} = this.state;
+    const { currentPlanet } = this.props;
+    const { tilesOpen } = this.state;
 
     return (
-      <View
-        billboarding={'on'}
-        style={styles.info}>
+      <View billboarding={"on"} style={styles.info}>
         <View>
-          <Text style={styles.infoTitle}>
-            {currentPlanet}
-          </Text>
+          <Text style={styles.infoTitle}>{currentPlanet}</Text>
         </View>
-       
-        {tilesOpen ? this.description(planets[currentPlanet].description) :
-          this.tiles(planets[currentPlanet].info)}
 
-        <VrButton
-          onClick={() => this.setState({tilesOpen: !tilesOpen})}>
+        {tilesOpen
+          ? this.description(planets[currentPlanet].description)
+          : this.tiles(planets[currentPlanet].info)}
+
+        <VrButton onClick={() => this.setState({ tilesOpen: !tilesOpen })}>
           <View style={styles.infoBtn}>
             <Text style={styles.infoBtnLabel}>MORE INFO</Text>
           </View>
@@ -73,57 +62,54 @@ export default class Info extends React.Component {
 const styles = StyleSheet.create({
   description: {
     fontSize: 24,
-    color: '#fff'
+    color: "#fff"
   },
   tiles: {},
   tile: {
     height: 40,
-    backgroundColor: '#304FFE',
+    backgroundColor: "#304FFE",
     margin: 5,
     padding: 10,
-    flexDirection: 'row'
+    flexDirection: "row"
   },
   tileLabel: {
     flex: 7,
     fontSize: 19,
-    color: '#fff'
+    color: "#fff"
   },
   tileValue: {
     flex: 3,
-    textAlign: 'right',
+    textAlign: "right",
     fontSize: 19,
-    color: '#fff'
+    color: "#fff"
   },
   info: {
     width: 650,
     minHeight: 400,
-    backgroundColor: 'transparent',
-    position: 'absolute',
+    backgroundColor: "transparent",
+    position: "absolute",
     layoutOrigin: [0, 0],
-    borderColor: '#fff',
+    borderColor: "#fff",
     borderWidth: 5,
     borderRadius: 10,
     padding: 20,
-    transform: [
-      {rotateY: 90},
-      {translate: [-300, 100, -850]}
-    ]
+    transform: [{ rotateY: 90 }, { translate: [-300, 100, -850] }]
   },
   infoTitle: {
     fontSize: 30,
-    color: '#fff',
-    fontWeight: 'bold'
+    color: "#fff",
+    fontWeight: "bold"
   },
   infoBtn: {
-    width: '100%',
+    width: "100%",
     height: 50,
-    backgroundColor: '#42c5f4',
+    backgroundColor: "#42c5f4",
     borderRadius: 10,
     marginTop: 30
   },
   infoBtnLabel: {
     fontSize: 30,
-    color: '#fff',
-    textAlign: 'center'
+    color: "#fff",
+    textAlign: "center"
   }
 });

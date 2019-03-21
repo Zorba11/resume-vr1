@@ -1,11 +1,9 @@
 /*
- * Demo Application - The Solar System
- * React VR demo for React Next Conf. 2017
- * Shay Keinan
+ * Based on the ReactVR demo by Shay Keinan @
+ * React Next Conf. 2017
+ *
  * */
-import {
-  AppRegistry
-} from 'react-vr';
-import SolarSystem from './components/solarSystem';
+import { AppRegistry } from "react-vr";
+import SolarSystem from "./components/solarSystem";
 
-AppRegistry.registerComponent('solarSystem', () => SolarSystem);
+AppRegistry.registerComponent("solarSystem", () => SolarSystem);

@@ -1,9 +1,9 @@
 const planets = {
   Skills: {
     info: [
-      { label: "Front-end: HTML, CSS, SASS, React & Redux", value: 7 },
-      { label: "Back-end: Java, Ajax, Node & Express, SQL", value: 6 },
-      { label: "Libraries & Design: jQuery, Three.js, Photoshop", value: 7 }
+      { label: "Front-end: HTML, CSS, SASS, React & Redux", value: 1 },
+      { label: "Back-end: Java, Ajax, Node & Express, SQL", value: 2 },
+      { label: "Libraries & Design: jQuery, Three.js, Photoshop", value: 3 }
     ],
     description:
       "Once he started taking web and mobile development development seriously, he spent more time focusing on digesting the Object Oriented and Functional Programming Principles. Also, as a person working with the web, naturally he did fell in love with JavaScript. As a person who learned the verbose nature of Java, JavaScript is sweet. Also, he do enjoy exploring various JS libraries. Also, recently he did start working with Android studio and he is loving it's easiness too."
@@ -26,11 +26,11 @@ const planets = {
   // },
   Bio: {
     info: [
-      { label: "Birth Place: Kerala, India", value: null },
-      { label: "Age: 25 ", value: null },
+      { label: "Birth Place: Kerala, India", value: 1 },
+      { label: "Age: 25 ", value: 2 },
       {
         label: "Languages: English, Malayalam, Hindi, Tamil(spoken)",
-        value: null
+        value: 3
       }
     ],
     description:
@@ -38,9 +38,9 @@ const planets = {
   },
   Experience: {
     info: [
-      { label: "PRO/WebDesigner : Aquamarine Hospitality", value: null },
-      { label: "Portfolio : www.alengeorge.com", value: null },
-      { label: "AdFilm maker : Freelance", value: null }
+      { label: "PRO/WebDesigner : Aquamarine Hospitality", value: 1 },
+      { label: "Portfolio : www.alengeorge.com", value: 2 },
+      { label: "AdFilm maker : Freelance", value: 3 }
     ],
     description:
       "In 2015 with self-thought HTML, CSS and JS he was able to build the initial website of the company he worked for(It was a simple static site).Later on, his job was to make advertisements for some local events and also during that period he was able conceive and direct a Short Film-'Portrait' which won the award for best film in some film festivals , also 'Portrait' was screened at ALIIFF International Film Festival. Later on, realizing the immense possibilities of being a programmer, he decided to pursue coding."

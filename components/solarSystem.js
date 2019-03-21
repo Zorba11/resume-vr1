@@ -1,8 +1,8 @@
 import React from "react";
 import {
   asset,
-  Pano,
   View,
+  Pano,
   Scene,
   AmbientLight,
   DirectionalLight

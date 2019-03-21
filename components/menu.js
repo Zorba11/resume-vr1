@@ -40,9 +40,11 @@ export default class Menu extends React.Component {
   }
 
   handleClick(planet) {
+    // console.log("1");
     const { switchPlanet } = this.props;
-
+    
     this.setState({ activePlanet: planet }, () => {
+      // console.log("2");
       // bounce the button
       const btnConfig = {
         value: this.state.bounceValue,

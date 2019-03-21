@@ -1,11 +1,5 @@
-import React from 'react';
-import {
-  asset,
-  View,
-  Model,
-  Animated,
-  StyleSheet
-} from 'react-vr';
+import React from "react";
+import { asset, View, Model, Animated, StyleSheet } from "react-vr";
 
 export default class Planet extends React.Component {
   constructor() {
@@ -62,36 +56,37 @@ export default class Planet extends React.Component {
   }
 
   // bounce animation
-  bounce({value, initial, toValue, friction = 1.5}) {
+  bounce({ value, initial, toValue, friction = 1.5 }) {
     value.setValue(initial);
 
-    Animated.spring(
-      value,
-      {
-        toValue,
-        friction,
-      }
-    ).start();
+    Animated.spring(value, {
+      toValue,
+      friction
+    }).start();
   }
 
   render() {
-    const {currentPlanet} = this.props;
-    const {rotation} = this.state;
+    const { currentPlanet } = this.props;
+    const { rotation } = this.state;
     const scale = this.state.bounceValue;
 
     return (
       <View style={styles.planet}>
-        <Animated.View style={{transform: [{scale}]}}>
+        <Animated.View style={{ transform: [{ scale }] }}>
           <Model
-            source={{obj: asset(`models/${currentPlanet}.obj`)}}
+            source={{ obj: asset(`models/${currentPlanet}.obj`) }}
             texture={asset(`textures/${currentPlanet}.png`)}
             lit={true}
-            style={[{
-              transform: [
-              {translate: [0, 0, 0]},
-              {scale: 9},
-              {rotateY: rotation}
-            ]}, styles.model]}
+            style={[
+              {
+                transform: [
+                  { translate: [0, 0, 0] },
+                  { scale: 9 },
+                  { rotateY: rotation }
+                ]
+              },
+              styles.model
+            ]}
           />
         </Animated.View>
       </View>
@@ -101,14 +96,14 @@ export default class Planet extends React.Component {
 
 const styles = StyleSheet.create({
   planet: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
     width: 1400,
     height: 500,
-    transform: [{translate: [-700, 0, 0]}]
+    transform: [{ translate: [-700, 0, 0] }]
   },
   model: {
-    position: 'absolute'
+    position: "absolute"
   }
 });
