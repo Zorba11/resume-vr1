@@ -1,8 +1,10 @@
-vr The materials in this code belongs to Shay Keinan, I am just trying this out as per his talk at ReactNext conference 2017. This is not used for any commercial purposes
+This project is based Shay Keinan's, talk at ReactNext conference held in 2017. All the models, textures and other assets used in this project belong to the respective artists. This is not used for any commercial purposes. 
 ===================================
+Note: This project depends on an older version of react-native so, updating them might led you to some contradictions in the paths specifications in rn.cli.config.js so, you might have to fix them manually or just stay with the same versions as I have used (refer package.json).
 
 About
 -----
+
 A demo application of React VR.
 
 Installation & Requirements
